@@ -45,11 +45,6 @@ const ShoppingList: React.FC<{}> = () => {
     }
     setMaterials(materials);
   }, []);
-  // const fillForm = (material: Material): void => {
-  //   console.log(material);
-  //   setInitForm({ ...initForm, id: material.id, quantity: material.quantity });
-  // };
-  // console.log(initForm);
   const handleUpdate = (material: Material):void => {
     let newMaterials = materials.map(mate => {
       if(mate.id === material.id) {

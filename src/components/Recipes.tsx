@@ -137,3 +137,15 @@ const Recipes: React.FC<{}> = () => {
 };
 
 export default Recipes;
+
+
+// ghim********************
+// khi truyen giua 2 components ngang cấp với nhau như shoppingList vs recipes phải qua trung gian app để lưu 
+// các listRecipe vs materials
+// => dùng localStorage 
+//( điểm yếu nó ko thể theo dõi sự thay đổi để cập nhất
+// nên chỉ coi nó như 1 cái để lưu dữ liệu cho vào useEffect để nó chạy lần đầu khởi tạo
+// và luôn nhớ set lại state để tự động update
+//)
+// => context
+// => redux
