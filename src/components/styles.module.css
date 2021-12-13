@@ -1,0 +1,12 @@
+.selected {
+    color: white !important;
+}
+.recipeItem p{
+    color: black;
+}
+.recipeItem:hover {
+    background-color: #0062cc !important;
+}
+.recipeItem:hover p{
+    color: white !important;
+}
