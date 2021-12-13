@@ -5,7 +5,7 @@ import { RecipeItem, Material } from "../models/Interface";
 import RecipeList from "./RecipeList";
 import RecipeDetail from "./RecipeDetail";
 import AddRecipe from "./AddRecipe";
-import EditRecipe from './EditRecipe'
+import EditRecipe from "./EditRecipe";
 import {
   Formik,
   Field,
@@ -40,12 +40,11 @@ const SignupSchema: any = Yup.object().shape({
     .required("Must have materials")
     .min(1, "Minimum of 1 materials"),
 });
-const initialValue:RecipeItem[] = [
-];
+const initialValue: RecipeItem[] = [];
 const Recipes: React.FC<{}> = () => {
   const location = useLocation() as any;
   const history = useHistory() as any;
-  const [recipeList, setRecipes] = useState(initialValue as RecipeItem[]|[]);
+  const [recipeList, setRecipes] = useState(initialValue as RecipeItem[] | []);
   const [recipeDetail, setRecipeDetail] = useState(null as RecipeItem | null);
   useEffect(() => {
     let recipes: RecipeItem[] = [];
@@ -114,13 +113,20 @@ const Recipes: React.FC<{}> = () => {
 
               <Route path="/recipes/form">
                 <div>
-                  <AddRecipe recipeList={recipeList} setRecipes = {setRecipes} removeDetail={removeDetail} />
-                
+                  <AddRecipe
+                    recipeList={recipeList}
+                    setRecipes={setRecipes}
+                    removeDetail={removeDetail}
+                  />
+
                   <br></br>
                 </div>
               </Route>
-              <Route  path="/recipes/edit/:id">
-                <EditRecipe setRecipeList={setRecipeList} recipes={recipeList} />
+              <Route path="/recipes/edit/:id">
+                <EditRecipe
+                  setRecipeList={setRecipeList}
+                  recipes={recipeList}
+                />
               </Route>
             </Switch>
           </Col>
