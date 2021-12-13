@@ -16,7 +16,6 @@ const RecipeList = (props: Props) => {
     console.log(recipeList)
     const handleSetDetail = (recipe: RecipeItem) => {
         props.setDetail(recipe)
-        // history.push('/recipfes')
     }
     return (
         <div>

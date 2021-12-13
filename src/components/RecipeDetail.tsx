@@ -30,7 +30,7 @@ const RecipeDetail: React.FC<Props> = (props) => {
       materials = JSON.parse(
         window.localStorage.getItem("materials") as string
       );
-    } // exist -> get/ not exist -> init let -> set
+    } 
     materials = [...materials, ...recipe.materials]
     let newMaterials: Material[] = []
     materials.forEach((material) => {

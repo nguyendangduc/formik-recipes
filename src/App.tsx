@@ -27,14 +27,20 @@ function App() {
                   Recipe Book
                 </Navbar.Brand>
                 <Nav className="mr-auto">
+                  {/* ghim*******************************
+                      chỉ cần thêm activeClassName việc còn lại của nó
+                  */}
                   <NavLink
                     className="p-3 text-secondary bg-light"
+                    activeClassName="navLink--active "
                     onClick={() => setCurrentPage("/recipes")}
                     to="/recipes"
                   >
                     Recipes
                   </NavLink>
                   <NavLink
+                    activeClassName="navLink--active "
+
                     className="p-3 text-secondary bg-light"
                     onClick={() => setCurrentPage("/shopping-list")}
                     to="/shopping-list"
